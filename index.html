@@ -1,31 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sock Poi | Urban Flow</title>
-    <meta name="description" content="Premium, customizable Sock Poi for flow artists. Travel-ready, modular, and built for the nomadic lifestyle.">
+    <meta name="description"
+        content="Premium, customizable Sock Poi for flow artists. Travel-ready, modular, and built for the nomadic lifestyle.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <!-- Ionicons for icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="brand">SOCK<span>POI</span></a>
+            <a href="#" class="brand">Flow<span>laPo</span></a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#shop">Builder</a></li>
-                <li><a href="#learn">Learn</a></li>
-                <li><a href="#community">Community</a></li>
+                <li class="dropdown">
+                    <a href="#shop" class="dropdown-trigger">Flow Shop <ion-icon
+                            name="chevron-down-outline"></ion-icon></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#shop">Build Your Poi</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="performances.html" class="dropdown-trigger">Performances <ion-icon
+                            name="chevron-down-outline"></ion-icon></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="performances.html#fire">Fire Flow</a></li>
+                        <li><a href="performances.html#led">LED Flow</a></li>
+                        <li><a href="performances.html#day">Day Flow</a></li>
+                        <li><a href="performances.html#group">Duet & Group</a></li>
+                        <li><a href="performances.html#moments">Moments</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#learn" class="dropdown-trigger">Learn Flow <ion-icon
+                            name="chevron-down-outline"></ion-icon></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#start">Start Your Flow</a></li>
+                        <li><a href="#train">Train With Us</a></li>
+                        <li><a href="#tutorials">Tutorials</a></li>
+                        <li><a href="#journal">Flow Journal</a></li>
+                    </ul>
+                </li>
+                <li><a href="#journey">Our Journey</a></li>
+                <li><a href="#connect">Connect</a></li>
             </ul>
             <div class="nav-actions">
-                <a href="#shop" class="btn btn-primary btn-small">Customize Yours</a>
+                <a href="#book" class="btn btn-primary btn-small">Book a Show</a>
             </div>
             <div class="mobile-menu-toggle">
                 <ion-icon name="menu-outline"></ion-icon>
@@ -43,7 +75,8 @@
             </div>
             <div class="hero-content">
                 <h1 class="hero-title">Flow Anywhere.<br><span class="highlight">Glow Everywhere.</span></h1>
-                <p class="hero-subtitle">Premium, customizable sock poi designed for the urban flow lifestyle. No batteries, pure motion.</p>
+                <p class="hero-subtitle">Premium, customizable sock poi designed for the urban flow lifestyle. No
+                    batteries, pure motion.</p>
                 <div class="trust-signals">
                     <div class="signal"><ion-icon name="people"></ion-icon> Trusted by 10,000+ Spinners</div>
                     <div class="signal"><ion-icon name="shield-checkmark"></ion-icon> 30-Day Flow Guarantee</div>
@@ -89,7 +122,7 @@
                         <h2 id="live-price">$45.00</h2>
                     </div>
                 </div>
-                
+
                 <div class="customizer-controls">
                     <h2 class="section-heading">The Poi Builder</h2>
                     <p class="customizer-desc">Craft your perfect setup. Modular, durable, and uniquely yours.</p>
@@ -112,9 +145,12 @@
                             <div class="option-group mt-2">
                                 <label>Fabric</label>
                                 <div class="btn-group fabric-group" id="fabric-options">
-                                    <button class="opt-btn active" data-img="duotone" data-val="UV Glow Duo-Tone" data-price="10">UV Glow Duo-Tone</button>
-                                    <button class="opt-btn" data-img="velvet" data-val="Crushed Velvet" data-price="15">Velvet</button>
-                                    <button class="opt-btn" data-img="mesh" data-val="Aero Mesh" data-price="5">Mesh</button>
+                                    <button class="opt-btn active" data-img="duotone" data-val="UV Glow Duo-Tone"
+                                        data-price="10">UV Glow Duo-Tone</button>
+                                    <button class="opt-btn" data-img="velvet" data-val="Crushed Velvet"
+                                        data-price="15">Velvet</button>
+                                    <button class="opt-btn" data-img="mesh" data-val="Aero Mesh"
+                                        data-price="5">Mesh</button>
                                 </div>
                             </div>
                         </div>
@@ -155,7 +191,8 @@
                         </div>
                         <div class="step-options">
                             <div class="btn-group" id="grip-options">
-                                <button class="opt-btn active" data-val="Silicone Knobs" data-price="10">Silicone Knobs</button>
+                                <button class="opt-btn active" data-val="Silicone Knobs" data-price="10">Silicone
+                                    Knobs</button>
                                 <button class="opt-btn" data-val="Fabric Loops" data-price="0">Fabric Loops</button>
                                 <button class="opt-btn" data-val="Finger Tabs" data-price="5">Finger Tabs</button>
                             </div>
@@ -174,8 +211,10 @@
                     <div class="infobox mental-health">
                         <div class="infobox-content">
                             <h3>Poi for Mental Health</h3>
-                            <p>Flow arts are proven to increase focus, coordination, and help manage anxiety or ADHD. Find your zen through active meditation.</p>
-                            <a href="#" class="btn btn-outline text-glow">Watch Free Tutorials <ion-icon name="play-circle"></ion-icon></a>
+                            <p>Flow arts are proven to increase focus, coordination, and help manage anxiety or ADHD.
+                                Find your zen through active meditation.</p>
+                            <a href="#" class="btn btn-outline text-glow">Watch Free Tutorials <ion-icon
+                                    name="play-circle"></ion-icon></a>
                         </div>
                     </div>
                     <div class="infobox hostel-pack">
@@ -186,21 +225,23 @@
                                 <ion-icon name="leaf"></ion-icon> Organic Cotton & Recycled Rubber
                             </div>
                             <h3>The Hostel Edition</h3>
-                            <p>Travel-ready. No batteries. Fits in your pocket. Includes a waterproof pouch & carabiner for the nomadic backpacker.</p>
+                            <p>Travel-ready. No batteries. Fits in your pocket. Includes a waterproof pouch & carabiner
+                                for the nomadic backpacker.</p>
                             <a href="#shop" class="btn btn-primary">Get the Traveler's Kit</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <!-- Flow-Link Section -->
         <section class="flow-link-section">
             <div class="section-container text-center">
-                 <h2 class="section-heading">The Flow-Link Experience</h2>
-                 <p>Every set comes with a QR code on the packaging linking you instantly to our "First 5 Moves" video series. Scan, spin, learn.</p>
-                 <br>
-                 <ion-icon name="qr-code-outline" style="font-size: 5rem; color: var(--neon-cyan);"></ion-icon>
+                <h2 class="section-heading">The Flow-Link Experience</h2>
+                <p>Every set comes with a QR code on the packaging linking you instantly to our "First 5 Moves" video
+                    series. Scan, spin, learn.</p>
+                <br>
+                <ion-icon name="qr-code-outline" style="font-size: 5rem; color: var(--neon-cyan);"></ion-icon>
             </div>
         </section>
 
@@ -228,4 +269,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>

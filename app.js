@@ -128,15 +128,85 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Mobile Menu Toggle effect (Just a simple visual toggle for this demo)
+    // Mobile Menu Toggle
     const mobileToggle = document.querySelector('.mobile-menu-toggle');
     const navLinks = document.querySelector('.nav-links');
+    const mobileToggleIcon = mobileToggle.querySelector('ion-icon');
+
     if (mobileToggle) {
         mobileToggle.addEventListener('click', () => {
-            alert('Mobile menu navigation triggered.');
+            navLinks.classList.toggle('nav-active');
+            
+            // Toggle Icon
+            if (navLinks.classList.contains('nav-active')) {
+                mobileToggleIcon.setAttribute('name', 'close-outline');
+            } else {
+                mobileToggleIcon.setAttribute('name', 'menu-outline');
+            }
         });
     }
 
+    // Mobile Dropdown Toggle
+    const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
+    dropdownTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            if (window.innerWidth <= 900) {
+                e.preventDefault();
+                const parent = trigger.parentElement;
+                parent.classList.toggle('active');
+            }
+        });
+    });
+
+    // Close mobile menu when clicking a link
+    const allNavLinks = document.querySelectorAll('.nav-links a');
+    allNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (!link.classList.contains('dropdown-trigger')) {
+                navLinks.classList.remove('nav-active');
+                mobileToggleIcon.setAttribute('name', 'menu-outline');
+            }
+        });
+    });
+
     // Assigning the dynamic images globally.
     // They will be loaded by checking the src elements in index.html and app.js
+
+    // Performance Video Modal
+    const videoModal = document.getElementById('videoModal');
+    const videoPlayer = document.getElementById('videoPlayer');
+    const closeModal = document.getElementById('closeModal');
+    const performanceBtns = document.querySelectorAll('.performance-btn');
+
+    if (videoModal && videoPlayer) {
+        performanceBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const videoSrc = btn.dataset.video;
+                videoPlayer.src = videoSrc;
+                videoModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        const hideModal = () => {
+            videoModal.classList.remove('active');
+            videoPlayer.src = '';
+            document.body.style.overflow = 'auto';
+        };
+
+        if (closeModal) {
+            closeModal.addEventListener('click', hideModal);
+        }
+
+        videoModal.addEventListener('click', (e) => {
+            if (e.target === videoModal) hideModal();
+        });
+        
+        // Escape key to close
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+                hideModal();
+            }
+        });
+    }
 });

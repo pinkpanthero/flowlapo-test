@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performances | FlowlaPo</title>
+    <meta name="description"
+        content="Experience the magic of FlowlaPo performances. From high-octane fire shows to mesmerizing LED displays.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Ionicons for icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">Flow<span>laPo</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="index.html#shop" class="dropdown-trigger">Flow Shop <ion-icon
+                            name="chevron-down-outline"></ion-icon></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#shop">Build Your Poi</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="performances.html" class="dropdown-trigger">Performances <ion-icon
+                            name="chevron-down-outline"></ion-icon></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#fire">Fire Flow</a></li>
+                        <li><a href="#led">LED Flow</a></li>
+                        <li><a href="#day">Day Flow</a></li>
+                        <li><a href="#group">Duet & Group</a></li>
+                        <li><a href="#moments">Moments</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="index.html#learn" class="dropdown-trigger">Learn Flow <ion-icon
+                            name="chevron-down-outline"></ion-icon></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#start">Start Your Flow</a></li>
+                        <li><a href="#train">Train With Us</a></li>
+                        <li><a href="#tutorials">Tutorials</a></li>
+                        <li><a href="#journal">Flow Journal</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#journey">Our Journey</a></li>
+                <li><a href="index.html#connect">Connect</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#book" class="btn btn-primary btn-small">Book a Show</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="performances-section">
+            <div class="section-container">
+                <h1 class="section-heading text-center">Our Performances</h1>
+                <div class="performances-grid">
+                    <!-- Fire Flow -->
+                    <div class="performance-card" id="fire">
+                        <div class="performance-img-container">
+                            <img src="https://images.unsplash.com/photo-1511200384813-f92a34493390?auto=format&fit=crop&q=80&w=800" alt="Fire Flow">
+                        </div>
+                        <h3 class="performance-title">Fire Flow</h3>
+                        <button class="performance-btn" data-video="https://www.youtube.com/embed/YbeR_it26-U">Click Here</button>
+                    </div>
+
+                    <!-- LED Flow -->
+                    <div class="performance-card" id="led">
+                        <div class="performance-img-container">
+                            <img src="https://images.unsplash.com/photo-1542382156909-9ae37b3f56fd?auto=format&fit=crop&q=80&w=800" alt="LED Flow">
+                        </div>
+                        <h3 class="performance-title">LED Flow</h3>
+                        <button class="performance-btn" data-video="https://www.youtube.com/embed/A77_6t-kU7c">Click Here</button>
+                    </div>
+
+                    <!-- Day Flow -->
+                    <div class="performance-card" id="day">
+                        <div class="performance-img-container">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800" alt="Day Flow">
+                        </div>
+                        <h3 class="performance-title">Day Flow</h3>
+                        <button class="performance-btn" data-video="https://www.youtube.com/embed/R92_f-10J40">Click Here</button>
+                    </div>
+
+                    <!-- Duet & Group -->
+                    <div class="performance-card" id="group">
+                        <div class="performance-img-container">
+                            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80&w=800" alt="Duet & Group">
+                        </div>
+                        <h3 class="performance-title">Duet & Group</h3>
+                        <button class="performance-btn" data-video="https://www.youtube.com/embed/V59_t-8K720">Click Here</button>
+                    </div>
+
+                    <!-- Moments -->
+                    <div class="performance-card" id="moments">
+                        <div class="performance-img-container">
+                            <img src="https://images.unsplash.com/photo-1514525253344-46367ecaa69c?auto=format&fit=crop&q=80&w=800" alt="Moments">
+                        </div>
+                        <h3 class="performance-title">Moments</h3>
+                        <button class="performance-btn" data-video="https://www.youtube.com/embed/G43_t-23L90">Click Here</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-container">
+            <span class="modal-close" id="closeModal"><ion-icon name="close-outline"></ion-icon></span>
+            <div class="video-wrapper">
+                <iframe id="videoPlayer" src="" title="Performance Video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="section-container footer-content">
+            <div class="footer-brand">
+                <h2>Flow<span>laPo</span></h2>
+                <p>Urban Flow. Engineered for movement.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="index.html#shop">Builder</a></li>
+                    <li><a href="performances.html">Performances</a></li>
+                    <li><a href="index.html#learn">Learn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 FlowlaPo. Designed for the nomadic spinner.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
