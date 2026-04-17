@@ -171,42 +171,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Assigning the dynamic images globally.
     // They will be loaded by checking the src elements in index.html and app.js
-
-    // Performance Video Modal
-    const videoModal = document.getElementById('videoModal');
-    const videoPlayer = document.getElementById('videoPlayer');
-    const closeModal = document.getElementById('closeModal');
-    const performanceBtns = document.querySelectorAll('.performance-btn');
-
-    if (videoModal && videoPlayer) {
-        performanceBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const videoSrc = btn.dataset.video;
-                videoPlayer.src = videoSrc;
-                videoModal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
-        });
-
-        const hideModal = () => {
-            videoModal.classList.remove('active');
-            videoPlayer.src = '';
-            document.body.style.overflow = 'auto';
-        };
-
-        if (closeModal) {
-            closeModal.addEventListener('click', hideModal);
-        }
-
-        videoModal.addEventListener('click', (e) => {
-            if (e.target === videoModal) hideModal();
-        });
-        
-        // Escape key to close
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && videoModal.classList.contains('active')) {
-                hideModal();
-            }
-        });
-    }
 });
