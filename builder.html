@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modular Poi Builder | FlowlaPo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body class="builder-body">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">Flow<span>laPo</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="builder.html" class="dropdown-trigger active">Flow Shop <ion-icon
+                            name="chevron-down-outline"></ion-icon></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="builder.html">Build Your Poi</a></li>
+                    </ul>
+                </li>
+                <li><a href="performances.html">Performances</a></li>
+                <li><a href="index.html#journey">Our Journey</a></li>
+                <li><a href="index.html#connect">Connect</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+        </div>
+    </nav>
+
+    <main class="builder-main">
+        <div class="builder-container">
+            <!-- Left Panel: Preview -->
+            <div class="preview-panel">
+                <div class="preview-sticky">
+                    <div class="poi-visual-container">
+                        <svg viewBox="0 0 200 600" class="poi-svg">
+                            <!-- Background shadows -->
+                            <defs>
+                                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feGaussianBlur stdDeviation="5" result="blur" />
+                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                </filter>
+                            </defs>
+                            
+                            <!-- Connecting Lines & Labels -->
+                            <g class="preview-labels">
+                                <line x1="120" y1="50" x2="160" y2="50" stroke="white" stroke-width="1" />
+                                <text x="130" y="35" fill="white" font-family="Montserrat" font-weight="800" font-size="12">KNOB</text>
+                                <text x="130" y="47" id="knob-label-weight" fill="white" font-family="Open Sans" font-size="10">31 g | 1 oz</text>
+
+                                <line x1="130" y1="250" x2="160" y2="250" stroke="white" stroke-width="1" />
+                                <text x="135" y="235" fill="white" font-family="Montserrat" font-weight="800" font-size="12">FABRIC</text>
+                                <text x="135" y="247" fill="white" font-family="Open Sans" font-size="10">30 g | 1 oz</text>
+
+                                <line x1="130" y1="500" x2="160" y2="500" stroke="white" stroke-width="1" />
+                                <text x="135" y="485" id="filling-label-name" fill="white" font-family="Montserrat" font-weight="800" font-size="12">RUBBER CHIPS</text>
+                                <text x="135" y="497" id="filling-label-weight" fill="white" font-family="Open Sans" font-size="10">100 g | 3.5 oz</text>
+                            </g>
+
+                            <!-- Knob Component -->
+                            <circle cx="100" cy="50" r="15" id="svg-knob" fill="#CCFF00" />
+                            
+                            <!-- Sock Body -->
+                            <path id="svg-sock-body" d="M90 65 L 110 65 L 125 500 Q 100 550 75 500 Z" fill="#FF0000" />
+                            
+                            <!-- Stripes (Clipped to sock body) -->
+                            <clipPath id="sockClip">
+                                <path d="M90 65 L 110 65 L 125 500 Q 100 550 75 500 Z" />
+                            </clipPath>
+                            
+                            <g clip-path="url(#sockClip)" id="svg-stripes">
+                                <rect x="50" y="100" width="100" height="25" class="stripe-rect" fill="#CCFF00" />
+                                <rect x="50" y="150" width="100" height="25" class="stripe-rect" fill="#CCFF00" />
+                                <rect x="50" y="200" width="100" height="25" class="stripe-rect" fill="#CCFF00" />
+                                <rect x="50" y="250" width="100" height="25" class="stripe-rect" fill="#CCFF00" />
+                                <rect x="50" y="300" width="100" height="25" class="stripe-rect" fill="#CCFF00" />
+                                <rect x="50" y="350" width="100" height="25" class="stripe-rect" fill="#CCFF00" />
+                                <rect x="50" y="400" width="100" height="25" class="stripe-rect" fill="#CCFF00" />
+                                <rect x="50" y="450" width="100" height="25" class="stripe-rect" fill="#CCFF00" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel: Controls -->
+            <div class="controls-panel">
+                <section class="config-section">
+                    <h2 class="config-step-title">1. Knob</h2>
+                    <div class="knob-options-grid">
+                        <div class="config-card active" data-type="knob" data-val="silicone" data-weight="31">
+                            <div class="card-check"><ion-icon name="checkmark-circle"></ion-icon></div>
+                            <h3>Silicone 31 g | 1 oz</h3>
+                            <p>Great grip, perfect shape & size. Favored by most poi artists.</p>
+                        </div>
+                        <div class="config-card" data-type="knob" data-val="rubber" data-weight="10">
+                            <div class="card-check"><ion-icon name="checkmark-circle"></ion-icon></div>
+                            <h3>Rubber 10 g | 0.4 oz</h3>
+                            <p>Lightweight & compact. Ideal for smaller hands or ultralight setups.</p>
+                        </div>
+                    </div>
+
+                    <div id="silicone-color-section">
+                        <h4 class="sub-step-title">Silicone color</h4>
+                        <div class="color-palette" id="knob-colors">
+                            <button class="color-swatch active" style="background: #FFFFFF;" data-color="#FFFFFF"><span></span></button>
+                            <button class="color-swatch uv" style="background: #CCFF00;" data-color="#CCFF00"><span>UV</span></button>
+                            <button class="color-swatch uv" style="background: #FF5E00;" data-color="#FF5E00"><span>UV</span></button>
+                            <button class="color-swatch" style="background: #FF0000;" data-color="#FF0000"><span></span></button>
+                            <button class="color-swatch uv" style="background: #FF00FF;" data-color="#FF00FF"><span>UV</span></button>
+                            <button class="color-swatch" style="background: #000080;" data-color="#000080"><span></span></button>
+                            <button class="color-swatch" style="background: #008080;" data-color="#008080"><span></span></button>
+                            <button class="color-swatch uv" style="background: #39FF14;" data-color="#39FF14"><span>UV</span></button>
+                            <button class="color-swatch" style="background: #000000;" data-color="#000000"><span></span></button>
+                            <button class="color-swatch glow" style="background: #E0FFE0;" data-color="#E0FFE0"><span>GLOW</span></button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="config-section">
+                    <h2 class="config-step-title">2. Fabric Color</h2>
+                    <div class="color-palette" id="fabric-colors">
+                        <button class="color-swatch" style="background: #FFFFFF;" data-color="#FFFFFF"><span></span></button>
+                        <button class="color-swatch uv" style="background: #CCFF00;" data-color="#CCFF00"><span>UV</span></button>
+                        <button class="color-swatch uv" style="background: #FF5E00;" data-color="#FF5E00"><span>UV</span></button>
+                        <button class="color-swatch active" style="background: #FF0000;" data-color="#FF0000"><span></span></button>
+                        <button class="color-swatch uv" style="background: #FF00FF;" data-color="#FF00FF"><span>UV</span></button>
+                        <button class="color-swatch" style="background: #000080;" data-color="#000080"><span></span></button>
+                        <button class="color-swatch" style="background: #008080;" data-color="#008080"><span></span></button>
+                        <button class="color-swatch uv" style="background: #39FF14;" data-color="#39FF14"><span>UV</span></button>
+                        <button class="color-swatch" style="background: #000000;" data-color="#000000"><span></span></button>
+                    </div>
+                </section>
+
+                <section class="config-section">
+                    <h2 class="config-step-title">3. Stripe Color</h2>
+                    <div class="color-palette" id="stripe-colors">
+                        <button class="color-swatch" style="background: #FFFFFF;" data-color="#FFFFFF"><span></span></button>
+                        <button class="color-swatch active uv" style="background: #CCFF00;" data-color="#CCFF00"><span>UV</span></button>
+                        <button class="color-swatch uv" style="background: #FF5E00;" data-color="#FF5E00"><span>UV</span></button>
+                        <button class="color-swatch" style="background: #FF0000;" data-color="#FF0000"><span></span></button>
+                        <button class="color-swatch uv" style="background: #FF00FF;" data-color="#FF00FF"><span>UV</span></button>
+                        <button class="color-swatch" style="background: #000080;" data-color="#000080"><span></span></button>
+                        <button class="color-swatch" style="background: #008080;" data-color="#008080"><span></span></button>
+                        <button class="color-swatch uv" style="background: #39FF14;" data-color="#39FF14"><span>UV</span></button>
+                        <button class="color-swatch" style="background: #000000;" data-color="#000000"><span></span></button>
+                    </div>
+                </section>
+
+                <section class="config-section">
+                    <h2 class="config-step-title">4. Filling</h2>
+                    <div class="filling-options-grid">
+                        <div class="filling-card" data-val="Rubber chips 50g" data-weight="50" data-name="RUBBER CHIPS">
+                            <svg viewBox="0 0 50 100" class="filling-icon"><path d="M15 10 Q 25 20 35 10 L 40 40 Q 25 50 10 40 Z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                            <span>Rubber chips 50g</span>
+                        </div>
+                        <div class="filling-card active" data-val="Rubber chips 100g" data-weight="100" data-name="RUBBER CHIPS">
+                            <svg viewBox="0 0 50 100" class="filling-icon"><path d="M10 10 Q 25 30 40 10 L 45 60 Q 25 80 5 60 Z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                            <span>Rubber chips 100g</span>
+                        </div>
+                        <div class="filling-card" data-val="Rubber chips 150g" data-weight="150" data-name="RUBBER CHIPS">
+                            <svg viewBox="0 0 50 100" class="filling-icon"><path d="M5 10 Q 25 40 45 10 L 48 85 Q 25 110 2 85 Z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                            <span>Rubber chips 150g</span>
+                        </div>
+                        <div class="filling-card" data-val="Stage ball 100g" data-weight="100" data-name="STAGE BALL">
+                            <svg viewBox="0 0 50 50" class="filling-icon"><circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                            <span>Stage ball 100g</span>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="builder-actions">
+                    <button class="btn btn-primary btn-large w-100">Add to Flow Bag</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="section-container footer-bottom">
+            <p>&copy; 2026 FlowlaPo. Engineered for movement.</p>
+        </div>
+    </footer>
+
+    <script src="builder.js"></script>
+</body>
+
+</html>
