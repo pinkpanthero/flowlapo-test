@@ -315,6 +315,16 @@ a {
     margin-bottom: 3rem;
 }
 
+/* Center Hero Text on Main Page specifically */
+.hero-section .hero-content {
+    text-align: center;
+}
+
+.hero-section .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .trust-signals {
     display: flex;
     gap: 2rem;
