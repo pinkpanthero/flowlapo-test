@@ -769,8 +769,9 @@ a {
 .detail-credit {
     font-size: 0.9rem;
     color: var(--neon-cyan);
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     text-transform: uppercase;
+    opacity: 0.8;
     letter-spacing: 2px;
 }
 
@@ -962,7 +963,6 @@ footer {
 
 .builder-main {
     min-height: 100vh;
-    padding-top: 80px;
 }
 
 .builder-container {
@@ -1134,6 +1134,129 @@ footer {
 
 .color-swatch.glow span {
     color: rgba(0, 100, 0, 0.7);
+}
+
+
+/* Builder Hero Section */
+.builder-hero {
+    position: relative;
+    height: 75vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('assets/hero_motion_blur.png');
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 6rem;
+    font-weight: 900;
+    margin-bottom: 0.2rem;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.8);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.hero-cta-btn {
+    background: #FF0055;
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    margin: 0 auto;
+    box-shadow: 0 15px 35px rgba(255, 0, 85, 0.4);
+}
+
+.hero-cta-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 50px rgba(255, 0, 85, 0.6);
+}
+
+.hero-cta-btn ion-icon {
+    font-size: 2.8rem;
+    color: black;
+}
+
+.hero-cta-btn .btn-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: black;
+    text-align: left;
+}
+
+.hero-cta-btn .btn-top {
+    font-size: 1.2rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.hero-cta-btn .btn-bottom {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+
+/* Override hero subtitle for builder to ensure centering */
+.builder-hero .hero-subtitle {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Builder Section Header */
+.builder-intro {
+    background: #000;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.builder-section-title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 2px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.builder-section-title span {
+    color: #FF0055;
 }
 
 /* Mobile Responsiveness */
