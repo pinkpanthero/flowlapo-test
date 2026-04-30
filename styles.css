@@ -1002,16 +1002,25 @@ footer {
     align-items: center;
 }
 
-.poi-svg {
+.poi-image-stack {
+    position: relative;
     width: 100%;
     max-width: 160px;
     height: auto;
-    max-height: 500px;
     filter: drop-shadow(0 0 10px rgba(255,255,255,0.1));
 }
 
-.preview-labels text {
-    user-select: none;
+.poi-image-stack img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.poi-image-stack img:first-child {
+    position: relative;
 }
 
 /* Right Panel: Controls */
