@@ -995,7 +995,7 @@ footer {
 
 .poi-visual-container {
     background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 24px;
     display: flex;
     justify-content: center;
@@ -1004,8 +1004,9 @@ footer {
 
 .poi-svg {
     width: 100%;
-    max-width: 350px;
+    max-width: 160px;
     height: auto;
+    max-height: 500px;
     filter: drop-shadow(0 0 10px rgba(255,255,255,0.1));
 }
 
