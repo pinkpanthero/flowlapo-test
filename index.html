@@ -1,200 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon | FlowlaPo</title>
+    <title>FlowlaPo | Urban Flow Arts</title>
+    content="Premium, customizable FlowlaPo sock poi for flow artists. Travel-ready, modular, and built for the nomadic
+    lifestyle.">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --neon-cyan: #00f2ff;
-            --neon-magenta: #ff00ff;
-            --dark-bg: #0a0a0c;
-            --glass-bg: rgba(255, 255, 255, 0.05);
-            --glass-border: rgba(255, 255, 255, 0.1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Outfit', sans-serif;
-            background-color: var(--dark-bg);
-            color: white;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            position: relative;
-        }
-
-        /* Animated Background */
-        .bg-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: radial-gradient(circle at 20% 30%, rgba(0, 242, 255, 0.15) 0%, transparent 40%),
-                        radial-gradient(circle at 80% 70%, rgba(255, 0, 255, 0.15) 0%, transparent 40%);
-            background-color: var(--dark-bg);
-        }
-
-        .bg-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.4;
-            filter: grayscale(20%) brightness(0.8);
-        }
-
-        /* Floating Poi Elements */
-        .poi-element {
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.5;
-            z-index: -1;
-            animation: float 10s infinite alternate ease-in-out;
-        }
-
-        .poi-1 {
-            background: var(--neon-cyan);
-            top: 10%;
-            left: 10%;
-        }
-
-        .poi-2 {
-            background: var(--neon-magenta);
-            bottom: 10%;
-            right: 10%;
-            animation-delay: -5s;
-        }
-
-        @keyframes float {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(50px, 50px) scale(1.2); }
-        }
-
-        /* Glass Content Box */
-        .content-box {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            padding: 4rem;
-            border-radius: 30px;
-            text-align: center;
-            max-width: 600px;
-            width: 90%;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            animation: fadeIn 1.5s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .logo span {
-            color: var(--neon-cyan);
-        }
-
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 4rem;
-            font-weight: 900;
-            line-height: 1;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(45deg, #fff, #888);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        p {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 2.5rem;
-            line-height: 1.6;
-        }
-
-        .coming-soon-badge {
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta));
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 2rem;
-            box-shadow: 0 0 20px rgba(0, 242, 255, 0.3);
-        }
-
-        .socials {
-            margin-top: 1rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-
-        .social-link {
-            color: rgba(255, 255, 255, 0.5);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-
-        .social-link:hover {
-            color: var(--neon-cyan);
-        }
-
-        /* Responsive */
-        @media (max-width: 480px) {
-            h1 { font-size: 2.5rem; }
-            .content-box { padding: 2rem; }
-        }
-    </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Ionicons for icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
-<body>
-    <div class="bg-container">
-        <!-- We use the assets image if it exists, otherwise the gradient fallback handles it -->
-        <img src="assets/hero_motion_blur.png" alt="" class="bg-image" onerror="this.style.display='none'">
-        <div class="poi-element poi-1"></div>
-        <div class="poi-element poi-2"></div>
-    </div>
 
-    <div class="content-box">
-        <div class="logo">Flow<span>laPo</span></div>
-        <div class="coming-soon-badge">Coming Soon</div>
-        <h1>Urban Flow.<br>Redefined.</h1>
-        <p>We're crafting the ultimate modular poi experience for the modern nomadic artist. The wait is almost over.</p>
-        
-        <div class="socials">
-            <a href="https://www.instagram.com/flowlapo_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-link" target="_blank">Instagram</a>
-            <a href="https://youtube.com/@flowlapo?si=hyhiKudmzT-W1KBS" class="social-link" target="_blank">YouTube</a>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand">Flow<span>laPo</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="builder.html" class="dropdown-trigger">Flow Shop <ion-icon
+                            name="chevron-down-outline"></ion-icon></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="builder.html">Build Your Poi</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="performances.html" class="dropdown-trigger">Performances <ion-icon
+                            name="chevron-down-outline"></ion-icon></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="performances.html#fire">Fire Flow</a></li>
+                        <li><a href="performances.html#led">LED Flow</a></li>
+                        <li><a href="performances.html#day">Day Flow</a></li>
+                        <li><a href="performances.html#group">Duet & Group</a></li>
+                        <li><a href="performances.html#moments">Moments</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#learn" class="dropdown-trigger">Learn Flow <ion-icon
+                            name="chevron-down-outline"></ion-icon></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#start">Start Your Flow</a></li>
+                        <li><a href="#train">Train With Us</a></li>
+                        <li><a href="#tutorials">Tutorials</a></li>
+                        <li><a href="#journal">Flow Journal</a></li>
+                    </ul>
+                </li>
+                <li><a href="#journey">Our Journey</a></li>
+                <li><a href="#connect">Connect</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#book" class="btn btn-primary btn-small">Book a Show</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
         </div>
-    </div>
+    </nav>
+
+    <main>
+        <!-- Home / Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-bg">
+                <!-- Using the generated motion blur image as background since video loop wasn't requested strictly as an mp4, but styled as a cinematic background -->
+                <div class="bg-image" style="background-image: url('assets/hero_motion_blur.png');"></div>
+                <div class="bg-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">Flow Anywhere.<br><span class="highlight">Glow Everywhere.</span></h1>
+                <p class="hero-subtitle">Premium, customizable FlowlaPo sock poi designed for the urban flow lifestyle.
+                    No
+                    batteries, pure motion.</p>
+
+            </div>
+        </section>
+
+        <!-- Vibe Selector Section -->
+        <section class="vibe-selector-section">
+            <div class="section-container">
+                <h2 class="section-heading text-center">Find Your Flow</h2>
+                <div class="vibe-grid">
+                    <div class="vibe-card" onclick="window.location.href='#shop'">
+                        <div class="vibe-icon"><ion-icon name="rocket"></ion-icon></div>
+                        <h3>I’m a Beginner</h3>
+                        <p>Soft, weighted training sets.</p>
+                    </div>
+                    <div class="vibe-card active" onclick="window.location.href='#shop'">
+                        <div class="vibe-icon"><ion-icon name="flash"></ion-icon></div>
+                        <h3>I’m a Performer</h3>
+                        <p>UV-reactive and stretch fabrics.</p>
+                    </div>
+                    <div class="vibe-card" onclick="window.location.href='#shop'">
+                        <div class="vibe-icon"><ion-icon name="leaf"></ion-icon></div>
+                        <h3>I want to Relax</h3>
+                        <p>Wellness sets for active meditation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signature Product / Customizer CTA -->
+        <section id="shop" class="shop-section">
+            <div class="section-container text-center">
+                <h2 class="section-heading">The Modular Poi Builder</h2>
+                <p class="customizer-desc" style="max-width: 700px; margin: 0 auto 2rem;">Craft your perfect setup.
+                    Modular, durable, and uniquely yours. Experience the full control of our advanced configuration
+                    system.</p>
+                <a href="builder.html" class="btn btn-primary btn-large">Launch Advanced Builder</a>
+            </div>
+        </section>
+
+
+        <!-- Learn & Sustainability -->
+        <section id="learn" class="learn-section">
+            <div class="section-container">
+                <div class="split-boxes">
+                    <div class="infobox mental-health">
+                        <div class="infobox-content">
+                            <h3>Poi for Mental Health</h3>
+                            <p>Flow arts are proven to increase focus, coordination, and help manage anxiety or ADHD.
+                                Find your zen through active meditation.</p>
+                            <a href="#" class="btn btn-outline text-glow">Watch Free Tutorials <ion-icon
+                                    name="play-circle"></ion-icon></a>
+                        </div>
+                    </div>
+                    <div class="infobox hostel-pack">
+                        <!-- BG image will be the traveler kit -->
+                        <div class="bg-overlay"></div>
+                        <div class="infobox-content">
+                            <div class="badge sustainability-badge">
+                                <ion-icon name="leaf"></ion-icon> Organic Cotton & Recycled Rubber
+                            </div>
+                            <h3>The Hostel Edition</h3>
+                            <p>Travel-ready. No batteries. Fits in your pocket. Includes a waterproof pouch & carabiner
+                                for the nomadic backpacker.</p>
+                            <a href="#shop" class="btn btn-primary">Get the Traveler's Kit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flow-Link Section -->
+        <section class="flow-link-section">
+            <div class="section-container text-center">
+                <h2 class="section-heading">The Flow-Link Experience</h2>
+                <p>Every set comes with a QR code on the packaging linking you instantly to our "First 5 Moves" video
+                    series. Scan, spin, learn.</p>
+                <br>
+                <ion-icon name="qr-code-outline" style="font-size: 5rem; color: var(--neon-cyan);"></ion-icon>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="section-container footer-content">
+            <div class="footer-brand">
+                <h2>Flow<span>laPo</span></h2>
+                <p>Urban Flow. Engineered for movement.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#shop">Builder</a></li>
+                    <li><a href="#learn">Learn</a></li>
+                    <li><a href="#community">Community</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 FlowlaPo. Designed for the nomadic spinner.</p>
+        </div>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
